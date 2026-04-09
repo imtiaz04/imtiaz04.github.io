@@ -26,15 +26,20 @@ font-weight:bold;
 }
 
 header{
-padding:80px;
+padding:100px 20px;
 text-align:center;
+display:flex;
+flex-direction:column;
+align-items:center;
 }
 
 section{
 background:#161b22;
-margin:20px;
-padding:25px;
+margin:30px auto;
+padding:30px;
 border-radius:10px;
+max-width:1000px;
+width:90%;
 }
 
 h2{
@@ -43,7 +48,7 @@ color:#58a6ff;
 
 .project{
 background:#0d1117;
-padding:15px;
+padding:20px;
 margin-top:15px;
 border-radius:8px;
 }
@@ -55,6 +60,22 @@ padding:10px 15px;
 border:none;
 border-radius:5px;
 cursor:pointer;
+margin:5px;
+}
+
+ul{
+line-height:2;
+}
+
+@media (max-width:768px){
+header{
+padding:60px 15px;
+}
+
+section{
+margin:15px;
+padding:20px;
+}
 }
 </style>
 
@@ -71,13 +92,14 @@ cursor:pointer;
 </nav>
 
 <header>
+
 <h1>Imtiaz Shaik</h1>
 
 <img src="https://avatars.githubusercontent.com/imtiaz04"
 width="120"
 style="border-radius:50%; margin:15px 0;">
 
-<p> DevOps Engineer | AWS | Terraform | Docker | Kubernetes</p>
+<p>DevOps Engineer | AWS | Terraform | Docker | Kubernetes</p>
 
 <a href="Imtiaz_DevOps_Resume.pdf" target="_blank">
 <button>Download Resume</button>
@@ -97,6 +119,7 @@ style="border-radius:50%; margin:15px 0;">
 
 </header>
 
+
 <section id="about">
 <h2>About Me</h2>
 <p>
@@ -105,9 +128,26 @@ Kubernetes, Docker, CI/CD pipelines, and automation.
 </p>
 </section>
 
+
 <section id="skills">
 <h2>Skills</h2>
- <section id="certifications">
+
+<ul>
+<li>AWS</li>
+<li>Azure</li>
+<li>Terraform</li>
+<li>Docker</li>
+<li>Kubernetes</li>
+<li>GitHub Actions</li>
+<li>Jenkins</li>
+<li>Ansible</li>
+<li>Linux</li>
+</ul>
+
+</section>
+
+
+<section id="certifications">
 <h2>Certifications</h2>
 
 <div class="project">
@@ -140,19 +180,8 @@ Kubernetes, Docker, CI/CD pipelines, and automation.
 <p>Infrastructure as Code using Terraform, modules, state management, and automation.</p>
 </div>
 
-</section> 
-<ul>
-<li>AWS</li>
-<li>Azure</li>
-<li>Terraform</li>
-<li>Docker</li>
-<li>Kubernetes</li>
-<li>GitHub Actions</li>
-<li>Jenkins</li>
-<li>Ansible</li>
-<li>Linux</li>
-</ul>
 </section>
+
 
 <section id="projects">
 <h2>Projects</h2>
@@ -174,12 +203,15 @@ Kubernetes, Docker, CI/CD pipelines, and automation.
 
 </section>
 
+
 <section id="contact">
 <h2>Contact</h2>
-<p>GitHub: github.com/imtiaz04</p>
-<p>LinkedIn: add-linkedin</p>
-<p>Email: add-email</p>
+
+<p>GitHub: https://github.com/imtiaz04</p>
+<p>LinkedIn: https://linkedin.com/in/YOUR_LINK</p>
+
 </section>
+
 
 </body>
 </html>
