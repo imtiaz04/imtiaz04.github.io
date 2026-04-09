@@ -6,10 +6,11 @@
 
 <style>
 body{
-font-family: Arial;
+font-family: Arial, sans-serif;
 margin:0;
 background:#0d1117;
 color:white;
+scroll-behavior:smooth;
 }
 
 nav{
@@ -26,6 +27,10 @@ color:white;
 margin:15px;
 text-decoration:none;
 font-weight:bold;
+}
+
+nav a:hover{
+color:#58a6ff;
 }
 
 header{
@@ -64,6 +69,7 @@ border:none;
 border-radius:5px;
 cursor:pointer;
 margin:5px;
+font-size:15px;
 }
 
 button:hover{
@@ -71,6 +77,22 @@ background:#2ea043;
 }
 
 ul{
+line-height:2;
+}
+
+#typing{
+font-size:20px;
+font-weight:bold;
+margin-top:10px;
+min-height:28px;
+}
+
+.pipeline-box{
+background:#0d1117;
+padding:25px;
+border-radius:8px;
+font-size:18px;
+text-align:center;
 line-height:2;
 }
 
@@ -83,6 +105,15 @@ section{
 margin:15px;
 padding:20px;
 }
+
+nav a{
+display:inline-block;
+margin:8px;
+}
+
+#typing{
+font-size:16px;
+}
 }
 </style>
 
@@ -94,7 +125,9 @@ padding:20px;
 <a href="#about">About</a>
 <a href="#skills">Skills</a>
 <a href="#certifications">Certifications</a>
+<a href="#experience">Experience</a>
 <a href="#projects">Projects</a>
+<a href="#pipeline">Pipeline</a>
 <a href="#contact">Contact</a>
 </nav>
 
@@ -106,10 +139,10 @@ padding:20px;
 width="120"
 style="border-radius:50%; margin:15px 0;">
 
-<p>DevOps Engineer | AWS | Terraform | Docker | Kubernetes</p>
+<p id="typing"></p>
 
 <a href="Imtiaz_DevOps_Resume.pdf" target="_blank">
-<button>Download Resume</button>
+<button>⬇ Download Resume</button>
 </a>
 
 <div style="margin-top:15px">
@@ -155,33 +188,55 @@ Kubernetes, Docker, CI/CD pipelines, and automation.
 <h2>Certifications</h2>
 
 <div class="project">
-<h3>Microsoft Azure Fundamentals (AZ-900)</h3>
+<h3>☁ Microsoft Azure Fundamentals (AZ-900)</h3>
 <p>Core Azure cloud concepts, services, pricing, and governance.</p>
 </div>
 
 <div class="project">
-<h3>Microsoft Azure Administrator (AZ-104)</h3>
+<h3>☁ Microsoft Azure Administrator (AZ-104)</h3>
 <p>Azure resource management, networking, storage, compute, and identity.</p>
 </div>
 
 <div class="project">
-<h3>Microsoft Azure DevOps Engineer (AZ-400)</h3>
+<h3>⚙ Microsoft Azure DevOps Engineer (AZ-400)</h3>
 <p>CI/CD pipelines, infrastructure automation, GitHub Actions, and DevOps practices.</p>
 </div>
 
 <div class="project">
-<h3>Microsoft Azure AI Fundamentals (AI-900)</h3>
+<h3>🤖 Microsoft Azure AI Fundamentals (AI-900)</h3>
 <p>AI workloads, Azure AI services, machine learning, and cognitive services.</p>
 </div>
 
 <div class="project">
-<h3>AWS Certified Cloud Practitioner (CLF-C02)</h3>
+<h3>☁ AWS Certified Cloud Practitioner (CLF-C02)</h3>
 <p>AWS cloud fundamentals, global infrastructure, pricing, and security.</p>
 </div>
 
 <div class="project">
-<h3>HashiCorp Terraform Associate</h3>
+<h3>🧱 HashiCorp Terraform Associate</h3>
 <p>Infrastructure as Code using Terraform, modules, state management, and automation.</p>
+</div>
+
+</section>
+
+<section id="experience">
+<h2>Experience</h2>
+
+<div class="project">
+<h3>Senior DevOps Engineer</h3>
+<p>
+Worked on AWS and Azure cloud environments, Terraform automation,
+CI/CD pipelines, Docker containerization, Kubernetes deployments,
+and infrastructure management.
+</p>
+</div>
+
+<div class="project">
+<h3>DevOps Engineer</h3>
+<p>
+Built and maintained deployment pipelines, automated infrastructure,
+supported cloud-native applications, and improved release workflows.
+</p>
 </div>
 
 </section>
@@ -206,6 +261,15 @@ Kubernetes, Docker, CI/CD pipelines, and automation.
 
 </section>
 
+<section id="pipeline">
+<h2>DevOps Pipeline</h2>
+
+<div class="pipeline-box">
+Code → GitHub → GitHub Actions → Docker → Kubernetes → AWS / Azure
+</div>
+
+</section>
+
 <section id="contact">
 <h2>Contact</h2>
 
@@ -222,6 +286,21 @@ Kubernetes, Docker, CI/CD pipelines, and automation.
 </div>
 
 </section>
+
+<script>
+const text = "Senior DevOps Engineer | AWS | Azure | Terraform | Kubernetes | CI/CD";
+let i = 0;
+
+function typing() {
+  if (i < text.length) {
+    document.getElementById("typing").innerHTML += text.charAt(i);
+    i++;
+    setTimeout(typing, 40);
+  }
+}
+
+typing();
+</script>
 
 </body>
 </html>
